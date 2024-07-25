@@ -197,7 +197,7 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _ReflectionPower: 0.32
-    - _RippleSpeed: 0.357
+    - _RippleSpeed: 0.053
     - _ShallowFalloff: 0.56
     - _Smoothness: 2.83
     - _SmoothnessTextureChannel: 0
@@ -235,15 +235,15 @@ Material:
     - _Wave3DTilingTuffs1: -0.18
     - _Wave3DTilingTufts: 0.2
     - _WaveAmplitude: 0.025
-    - _WaveDirection: 1.35
-    - _WaveFoamOpacity: 0.325
+    - _WaveDirection: 5.46
+    - _WaveFoamOpacity: 0.011
     - _WaveNoiseAmount: 2
     - _WaveNoiseScale: 30
-    - _WaveSpeed: 0.948
+    - _WaveSpeed: 0.021
     - _WaveTiling: 0.21
     - _WaveTiling1: 0.2
     - _WaveTiling2: 0.07
-    - _WaveWavelength: 0.2
+    - _WaveWavelength: 0.14
     - _ZWrite: 1
     - __dirty: 0
     - _add: 0.38
