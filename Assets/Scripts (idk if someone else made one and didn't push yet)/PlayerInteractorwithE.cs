@@ -8,9 +8,9 @@ public class PlayerInteractorwithE : MonoBehaviour
     public float interactionDistance = 2f; // The distance at which the player can interact with objects
     public float throwForce = 10f; // The force applied when throwing an item
     private GameObject carriedItem = null;
-    private bool isDoorRotated = false;
-    private Quaternion originalDoorRotation;
-    private Vector3 attachmentPointOffset;
+    private Dictionary<GameObject, Quaternion> doorOriginalRotations = new Dictionary<GameObject, Quaternion>();
+    private Vector3 attachmentPointOffset; // Add this line to declare the variable
+
 
     void Start()
     {
@@ -99,16 +99,16 @@ public class PlayerInteractorwithE : MonoBehaviour
 
     void RotateDoor(GameObject door)
     {
-        if (!isDoorRotated)
+        if (!doorOriginalRotations.ContainsKey(door))
         {
-            originalDoorRotation = door.transform.rotation;
+            doorOriginalRotations[door] = door.transform.rotation;
             door.transform.Rotate(0, -90, 0);
         }
         else
         {
-            door.transform.rotation = originalDoorRotation;
+            door.transform.rotation = doorOriginalRotations[door];
+            doorOriginalRotations.Remove(door);
         }
-        isDoorRotated = !isDoorRotated;
     }
 
     void UpdateAttachmentPoint()
